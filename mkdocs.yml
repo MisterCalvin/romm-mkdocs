@@ -1,5 +1,5 @@
 site_name: RomM Documentation
-site_url: "https://8000--dev--tan-halibut-85--kevin.coder.sbotnas.io/"
+site_url: "https://mistercalvin.github.io/romm-mkdocs/"
 site_author: RomM Team
 site_description: Your beautiful, powerful, self-hosted rom manager
 repo_url: "https://github.com/MisterCalvin/romm-mkdocs"
@@ -120,8 +120,7 @@ extra:
           name: This page could be improved
           data: 0
           note: >-
-            Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            Thanks for your feedback!
 
   env:
     branch: !ENV [GITHUB_REF_NAME, 'main']

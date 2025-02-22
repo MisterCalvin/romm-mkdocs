@@ -8,3 +8,6 @@
     * [Authentication Issues](troubleshooting/authentication.md)
     * [Synology Issues](troubleshooting/synology.md)
     * [Miscellanous Issues](troubleshooting/miscellaneous-troubleshooting.md)
+* Miscellaneous
+    * [FAQs](miscellaneous/faqs.md)
+    * [Branding Guidelines](miscellaneous/brand-guidelines.md)
