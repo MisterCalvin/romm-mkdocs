@@ -4,8 +4,6 @@ description: Your beautiful, powerful, self-hosted rom manager
 hide:
   - toc
 ---
-#
-
 ![Logo](assets/images/logo-header.png){ .skip-lightbox }
 /// caption
 Welcome to the **RomM Project**, the ecosystem around the premier self-hosted, open source rom manager.
@@ -17,7 +15,7 @@ Official Website: <a href="https://romm.app" >https://romm.app</a> | Demo Websit
 
 RomM (ROM Manager) allows you to scan, enrich, and browse your game collection with a clean and responsive interface. With support for multiple platforms, various naming schemes, and custom tags, RomM is a must-have for anyone who plays on emulators.
 
-To get started with RomM, head over to the [Quick Start guide](quick-start-guide.md) in the main repository.
+To get started with RomM, head over to the [Quick Start guide](getting-started/quick-start-guide.md) in the main repository.
 
 ### Philosophy
 

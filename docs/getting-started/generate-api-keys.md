@@ -1,7 +1,6 @@
 ---
 title: Generate API Keys
 ---
-
 ## IGDB
 
 To access the IGDB API you'll need a Twitch account and a valid phone number for 2FA verification. Up-to-date instructions are available in the [IGDB API documentation](https://api-docs.igdb.com/#account-creation). When registering your application in the Twitch Developer Portal, fill out the form like so:
@@ -16,7 +15,7 @@ To access the IGDB API you'll need a Twitch account and a valid phone number for
 
 Note the client ID and secret that appear on screen, and use them to set `IGDB_CLIENT_ID` and `IGDB_CLIENT_SECRET` in your environment variables.
 
-|![IGDB_Creation](assets/images/igdb-register-app.png)|![IGDB_Secret](assets/images/igdb-client-details.png)|
+|![IGDB_Creation](../assets/images/igdb-register-app.png)|![IGDB_Secret](../assets/images/igdb-client-details.png)|
 |---|---|
 
 ## MobyGames
