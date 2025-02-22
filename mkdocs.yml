@@ -50,7 +50,7 @@ plugins:
         font_family: Roboto
         background_color: "#371f69"
         color: "#ede5f8"
-        logo: docs/assets/images/romm-logo.png  # Add this line - path relative to project root
+        logo: docs/assets/images/romm-logo.png
         title: RomM Documentation
         description: Your beautiful, powerful, self-hosted rom manager
   - glightbox:

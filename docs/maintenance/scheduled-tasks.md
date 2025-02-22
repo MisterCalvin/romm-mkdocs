@@ -2,8 +2,6 @@
 title: Scheduled Tasks
 description: Scheduling Tasks in RomM
 ---
-## Scheduled tasks
-
 Scheduled tasks can be enabled and configured with the following environment variables:
 
 |Variable|Description|Value|
