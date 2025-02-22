@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 # Navigation
 
 * [Introduction](index.md)
