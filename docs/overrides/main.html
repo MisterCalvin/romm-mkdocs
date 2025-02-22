@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% if current_version and current_version == "pre-release" %}
+  {% block announce %}
+    <div class="md-banner md-banner--pre-release">
+      You are currently viewing <strong>pre-release</strong> documentation ({{ current_version }}).
+      For the stable version, please
+      <strong><a href="{{ base_url }}/../latest">access the latest release</a></strong>.
+    </div>
+  {% endblock %}
+{% endif %}
+
+{% if current_version and current_version not in ["latest", "pre-release"] %}
+  {% block outdated %}
+    <div class="md-banner">
+      You are currently viewing <strong>outdated</strong> documentation ({{ current_version }}).
+      For the most up-to-date information, please
+      <strong><a href="{{ base_url }}/../latest">refer to the latest release</a></strong>.
+    </div>
+  {% endblock %}
+{% endif %}

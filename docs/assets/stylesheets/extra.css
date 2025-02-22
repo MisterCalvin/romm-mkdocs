@@ -1,0 +1,42 @@
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #371f69;
+  --md-primary-fg-color--light: #553e98;
+  --md-primary-fg-color--dark: #371f69;
+  --md-accent-fg-color: #bea4e1;
+  --md-accent-fg-color--transparent: #bea4e133;
+  --md-accent-bg-color: #ede5f8;
+  --md-accent-bg-color--light: #e1a38d;
+
+  /* Improve active link visibility in dark mode */
+  --md-typeset-a-color: #bea4e1;
+  --md-nav-link-color--active: #ede5f8;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #553e98;
+  --md-primary-fg-color--light: #bea4e1;
+  --md-primary-fg-color--dark: #371f69;
+  --md-accent-fg-color: #e6c7a7;
+  --md-accent-fg-color--transparent: #e6c7a733;
+  --md-accent-bg-color: #ede5f8;
+  --md-accent-bg-color--light: #e1a38d;
+}
+
+.md-banner {
+  background-color: var(--md-warning-bg-color);
+  color: var(--md-warning-fg-color);
+  text-align: center;
+  padding: 0.5em;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.md-banner--pre-release {
+  background-color: #371f69;  /* ROMM's dark purple */
+  color: #ede5f8;  /* ROMM's light purple */
+}
+
+.md-banner a {
+  color: inherit;
+  text-decoration: underline;
+}

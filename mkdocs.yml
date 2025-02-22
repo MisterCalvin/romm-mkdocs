@@ -1,8 +1,13 @@
 site_name: RomM Documentation
-site_url: https://pages.dev
+site_url: 'https://8000--dev--tan-halibut-85--kevin.coder.sbotnas.io/'
+site_author: RomM Team
+site_description: Your beautiful, powerful, self-hosted rom manager
 theme:
   name: material
-  logo: assets/images/romm-logo.svg
+  icon:
+    logo: assets/images/romm-logo.png
+  logo: assets/images/romm-logo.png
+  #custom_dir: docs/overrides
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -35,6 +40,14 @@ theme:
 plugins:
   - search
   - mkdocs-video
+  - social:
+      cards_layout_options:
+        font_family: Roboto
+        background_color: "#371f69"
+        color: "#ede5f8"
+        logo: docs/assets/images/romm-logo.png  # Add this line - path relative to project root
+        title: RomM Documentation
+        description: Your beautiful, powerful, self-hosted rom manager
   - glightbox:
       skip_classes:
         - skip-lightbox
@@ -49,7 +62,7 @@ plugins:
       branch: develop
       exclude_committers:
         - "web-flow"  # GitHub web UI edits
-      token: !ENV MKDOCS_GIT_COMMITTERS_API_KEY
+      #token: !ENV MKDOCS_GIT_COMMITTERS_API_KEY
 
 markdown_extensions:
   - pymdownx.blocks.caption
@@ -88,6 +101,8 @@ extra:
       name: romm.app
 
   analytics:
+    provider: google
+    property: !ENV GOOGLE_PROPERTY_ID
     feedback:
       title: Was this page helpful?
       ratings:
@@ -103,8 +118,13 @@ extra:
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 
+  version:
+    provider: mike
+    default: latest
+  #pre_release: true
+
 extra_css:
-  - assets/css/extra.css
+  - assets/stylesheets/extra.css
 
 watch:
   - docs

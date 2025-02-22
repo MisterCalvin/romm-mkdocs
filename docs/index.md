@@ -1,5 +1,6 @@
 ---
 title: Introduction
+description: Your beautiful, powerful, self-hosted rom manager
 hide:
   - toc
 ---
@@ -36,7 +37,11 @@ We strive to create a safe and respectful space where everyone can contribute an
 
 Join us on Discord, where you can ask questions, submit ideas, get help, showcase your collection, and discuss RomM with other users.
 
-[![discord-invite-img]][discord-invite]
+<div style="text-align: center">
+    <a href="https://discord.gg/RGPJHNMMwJ">
+        <img src="https://invidget.switchblade.xyz/RGPJHNMMwJ" alt="Join our Discord">
+    </a>
+</div>
 
-[discord-invite-img]: https://invidget.switchblade.xyz/RGPJHNMMwJ
-[discord-invite]: https://discord.gg/RGPJHNMMwJ
+## A simple version change
+Hello! I am only available on the `1.0.1` version of this site!
