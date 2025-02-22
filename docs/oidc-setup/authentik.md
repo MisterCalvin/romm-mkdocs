@@ -1,5 +1,6 @@
 ---
 title: OIDC Setup With Authentik
+description: Setting up Authentik for RomM authentication
 ---
 # OIDC Setup With Authentik
 

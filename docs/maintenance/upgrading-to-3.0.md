@@ -1,5 +1,6 @@
 ---
 title: Upgrading to 3.0
+description: Upgrading to RomM 3.0
 ---
 Version 3.0 of RomM introduces a number of breaking changes aimed at improving performance and usability, which will require some users to make specific changes before upgrading to ensure compatibility and to take full advantage of the new features.
 

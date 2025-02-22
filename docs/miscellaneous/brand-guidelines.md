@@ -1,5 +1,6 @@
 ---
 title: Brand Guidelines
+description: Guidelines for repesenting the RoM project
 ---
 We’ve put together some guidelines for those anyone who wants to use our name and logo. In this context, "RomM", "The RomM Project", "the project", "we", "us", and "our" refer to the RomM project.
 

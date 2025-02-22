@@ -1,5 +1,6 @@
 ---
 title: Custom Platforms
+description: Creating and managing custom platforms
 ---
 While RomM supports every platform listed in the [Supported Platforms page](supported-platforms.md), the list is not exhaustive, and you may have ROMs in your library for other platforms. To load those files into RomM, place them in a folder for each platform, and give it a name that's **all lowercase**, with **`-` to separate words**, and with **no white spaces**. For example, `pocket-challenge-v2` would map to `Pocket Challenge V2`, and display the default platform icon in the app.
 

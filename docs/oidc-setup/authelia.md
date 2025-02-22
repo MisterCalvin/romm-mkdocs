@@ -1,5 +1,6 @@
 ---
 title: OIDC Setup With Authelia
+description: Setting up Authelia for RomM authentication
 ---
 # OIDC Setup With Authelia
 

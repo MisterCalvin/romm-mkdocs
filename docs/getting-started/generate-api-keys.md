@@ -1,5 +1,6 @@
 ---
 title: Generate API Keys
+description: Generating API Keys for metadata providers
 ---
 ## IGDB
 

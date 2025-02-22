@@ -1,5 +1,6 @@
 ---
 title: Tinfoil Integration
+description: Setting up Tinfoil to work with your RomM library
 ---
 This will help you configure the [Tinfoil](https://tinfoil.io/) integration for your Switch to work with your RomM library.
 

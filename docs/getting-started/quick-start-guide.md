@@ -1,5 +1,6 @@
 ---
 title: Quick Start Guide
+description: Getting RomM up and running - fast
 ---
 
 This quick start guide will help you get a RomM instance up and running. It is split into 3 parts:

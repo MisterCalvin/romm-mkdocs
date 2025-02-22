@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting Synology
+description: Troubleshooting issues when using Synology products
 ---
 ### ErrNo 13: Access Denied
 

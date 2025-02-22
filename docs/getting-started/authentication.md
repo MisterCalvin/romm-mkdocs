@@ -1,5 +1,6 @@
 ---
 title: Authentication
+description: Authentication support in RomM
 ---
 RomM provides support for various forms of authentication, granting flexibility in securing access to its features.
 

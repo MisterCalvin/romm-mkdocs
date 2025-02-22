@@ -1,5 +1,6 @@
 ---
 title: Environment Variables
+description: The complete list of available environment variables
 ---
 This is a complete list of available environment variables; required variables are marked with a `✓`.
 

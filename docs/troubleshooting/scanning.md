@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting Scanning
+description: Troubleshooting issues relating to library scanning
 ---
 ### Scan is skipping all platforms/ends instantly
 
