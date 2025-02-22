@@ -126,6 +126,8 @@ extra:
   env:
     branch: !ENV [GITHUB_REF_NAME, 'main']
     commit_sha: !ENV [commit_sha, '']  # Will be empty on main, show SHA on develop
+    username: !ENV GITHUB_REPOSITORY_OWNER
+    repo_name: !ENV GITHUB_REPOSITORY
 
   #version:
     #provider: mike
