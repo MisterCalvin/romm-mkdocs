@@ -20,12 +20,12 @@ This guide will assume that you already have the following done, if not - stop h
 * A MobyGames account (optional)
 * Your Roms organized in the correct format
 
-> [!CAUTION]
-> Not setting up RomM with a metadata API will work for basic operation but can cause issues with, for instance, the Playnite plugin. It is recommended to setup IGDB API keys to avoid issues during setup.
+!!! warning "CAUTION"
+    Not setting up RomM with a metadata API will work for basic operation but can cause issues with, for instance, the Playnite plugin. It is recommended to setup IGDB API keys to avoid issues during setup.
 
 #### Twitch and MobyGames API Keys
 
-Head over to [API key docs](https://github.com/rommapp/romm/wiki/Generate-API-Keys) to get your Twitch and/or MobyGames keys, then come back here
+Head over to [API key docs](generate-api-keys.md) to get your Twitch and/or MobyGames keys, then come back here
 
 #### Generating Authentication Keys
 
@@ -64,7 +64,10 @@ Now that we have everything gathered, we can begin getting your instance set up!
     * `/path/to/config`: Path to the directory where you will store the config.yml
 5. Save the file as *docker-compose.yml* instead of *docker-compose.example.yml*. It should look soomething like this:
 
-![336102458-386dbff4-85ca-4926-86e4-48dc47771451](https://github.com/user-attachments/assets/081f8991-92ae-4129-8923-124f8146ab5b)
+???+ example "RomM Docker Compose"
+    ``` yaml
+    --8<-- "quick-start-example-docker-compose.yml"
+    ```
 
 6. Open the terminal and navigate to the directory containing the docker-compose file
 7. Run `docker compose up -d` to kick off the docker pull. You will see it pull the container and set up the volumes and network:

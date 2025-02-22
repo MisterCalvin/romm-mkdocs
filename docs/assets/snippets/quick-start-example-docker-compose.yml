@@ -1,0 +1,42 @@
+version: "3"
+
+volumes:
+  mysql_data:
+  romm_resources:
+  romm_redis_data:
+
+services:
+  romm:
+    image: rommapp/romm:latest
+    container_name: romm
+    restart: unless-stopped
+    environment:
+      - DB_HOST=romm-db
+      - DB_NAME=romm
+      - DB_USER=romm-user
+      - DB_PASSWD=drz38kNwnkmSTpdL3WYeHtKQe
+      - IGDB_CLIENT_ID=hf9vne6kkn6blmzlkr5wfqz4ea0orc
+      - IGDB_CLIENT_SECRET=f0564qxlpheoqkshs3jo2im2slfcg9
+      - ROMM_AUTH_SECRET_KEY=2adfb58fb38ef7a3865f82c0f7c5f76c53c166086336b483909f9408478b9d3
+    volumes:
+      - romm_resources:/romm/resources # Resources fetched from IGDB (covers, screenshots, etc.)
+      - romm_redis_data:/redis-data # Cached data for background tasks
+      - /home/USER/RomM/roms:/romm/library # Your game library
+      - /home/USER/RomM/assets:/romm/assets # Uploaded saves, states, etc.
+      - /home/USER/RomM/config:/romm/config # Path where config.yml is stored
+    ports:
+      - 80:8080
+    depends_on:
+      - romm-db
+
+  romm-db:
+    image: mariadb:latest
+    container_name: romm-db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=MS3TpSan4xgiDS2HU3NZaNz9T
+      - MYSQL_DATABASE=romm
+      - MYSQL_USER=romm-user
+      - MYSQL_PASSWORD=drz38kNwnkmSTpdL3WYeHtKQe
+    volumes:
+      - mysql_data:/var/lib/mysql
