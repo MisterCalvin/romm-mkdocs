@@ -1,5 +1,6 @@
 ---
 title: RuffleRS Player
+description: Information about RuffleRS, the web-based player for flash games
 ---
 [Ruffle](https://ruffle.rs/) is a web-based player for flash games. With flash now dscontinued, this is the best way to play your flash collection in the browser.
 

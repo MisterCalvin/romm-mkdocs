@@ -1,5 +1,6 @@
 ---
 title: Miscellaneous Troubleshooting
+description: Troubleshooting miscellaneous issues
 ---
 ### Restarting the container when using SQLite drops all the data/requires a full re-scan
 

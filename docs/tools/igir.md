@@ -1,5 +1,6 @@
 ---
 title: Igir Collection Manager
+description: The zero-setup ROM collection manager
 ---
 [Igir](https://igir.io/) is a zero-setup ROM collection manager that sorts, filters, extracts or archives, patches, and reports on collections of any size on any OS. It can be used to rename your roms to match the RomM database, and to move them into a new directory structure.
 

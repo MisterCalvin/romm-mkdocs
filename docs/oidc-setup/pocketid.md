@@ -1,5 +1,6 @@
 ---
 title: OIDC Setup With PocketID
+description: Setting up PocketID for RomM authentication
 ---
 # OIDC Setup With Pocket ID
 

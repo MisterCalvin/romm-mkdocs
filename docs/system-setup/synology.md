@@ -1,5 +1,6 @@
 ---
 title: Synology Setup
+description: Setting up RomM on Synology products
 ---
 ## Prerequisites
 This guide assumes you're familiar with Docker and have basic knowledge of server management. You'll need:

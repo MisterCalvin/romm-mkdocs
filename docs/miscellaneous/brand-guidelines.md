@@ -1,12 +1,12 @@
 ---
 title: Brand Guidelines
+description: Guidelines for repesenting the RoM project
 ---
 We’ve put together some guidelines for those anyone who wants to use our name and logo. In this context, "RomM", "The RomM Project", "the project", "we", "us", and "our" refer to the RomM project.
 
 ## The Logo
 ![Logo](../assets/images/romm-logo.svg){ width="180" height="180" .skip-lightbox }
 /// caption
-Welcome to the **RomM Project**, the ecosystem around the premier self-hosted, open source rom manager.
 ///
 
 | Color | Hex Code |

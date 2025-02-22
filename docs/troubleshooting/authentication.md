@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting Authentication
+description: Troubleshooting issues relating to authentication
 ---
 ### Error: `403 Forbidden`
 

@@ -1,5 +1,6 @@
 ---
 title: FAQs
+description: Frequently asked questions
 ---
 ### Why is not PSP emulation enabled if emulatorjs supports it?
 

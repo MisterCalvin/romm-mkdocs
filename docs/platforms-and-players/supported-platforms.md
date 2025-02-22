@@ -1,5 +1,6 @@
 ---
 title: Supported Platforms
+description: The complete list of supported platforms within RomM
 ---
 Below is a list of all supported platforms/systems/consoles and their respective folder names. **The folder name is case-sensitive and must be used exactly as it appears in the list below.**
 
