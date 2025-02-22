@@ -22,21 +22,29 @@
   --md-accent-bg-color--light: #e1a38d;
 }
 
-.md-banner {
-  background-color: var(--md-warning-bg-color);
-  color: var(--md-warning-fg-color);
+.banner {
+  height: 24px;       /* Made slightly taller for the warning icon */
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;       /* Increased to ensure it stays above other elements */
   text-align: center;
-  padding: 0.5em;
-  font-size: 0.9em;
-  line-height: 1.4;
+  background-color: #856404;
+  line-height: 24px;  /* Vertically center the text */
+  font-weight: 500;   /* Make text slightly bolder */
 }
 
-.md-banner--pre-release {
-  background-color: #371f69;  /* ROMM's dark purple */
-  color: #ede5f8;  /* ROMM's light purple */
+.banner + .md-header {
+    top: 24px;          /* Match the banner height */
 }
 
-.md-banner a {
-  color: inherit;
-  text-decoration: underline;
+/* Adjust the main content area when banner is present */
+.banner ~ .md-main {
+    height: calc(100vh - 88px);  /* Adjust for banner + header height */
+}
+
+.banner a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }

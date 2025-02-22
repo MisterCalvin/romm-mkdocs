@@ -1,10 +1,6 @@
 ---
 title: Troubleshooting Synology
 ---
-
-
-## Synology
-
 ### ErrNo 13: Access Denied
 
 We have noticed recently a spate of access denied on Synology systems via Portainer or even docker manager. The ErrNo13 is directly related to Synology and it is a simple permission issue. To fix it please do the following:

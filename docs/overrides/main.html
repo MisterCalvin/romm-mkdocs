@@ -1,21 +1,19 @@
 {% extends "base.html" %}
 
-{% if current_version and current_version == "pre-release" %}
-  {% block announce %}
-    <div class="md-banner md-banner--pre-release">
-      You are currently viewing <strong>pre-release</strong> documentation ({{ current_version }}).
-      For the stable version, please
-      <strong><a href="{{ base_url }}/../latest">access the latest release</a></strong>.
-    </div>
-  {% endblock %}
+{% block header %}
+{% if config.extra.env.branch == "develop" %}
+<!-- Development Banner -->
+<div class="banner">
+    <p style="color:#ffffff; display:inline;">
+        ⚠️ Development Preview Build
+        {% if config.extra.env.commit_sha %}
+            (<a href="https://github.com/{{ config.extra.vars.username }}/{{ config.repo_name.split('/')[1] }}/commit/{{ config.extra.env.commit_sha }}"
+                style="color: #ffffff; text-decoration: underline;">{{ config.extra.env.commit_sha }}</a>)
+        {% endif %}
+    </p>
+</div>
 {% endif %}
 
-{% if current_version and current_version not in ["latest", "pre-release"] %}
-  {% block outdated %}
-    <div class="md-banner">
-      You are currently viewing <strong>outdated</strong> documentation ({{ current_version }}).
-      For the most up-to-date information, please
-      <strong><a href="{{ base_url }}/../latest">refer to the latest release</a></strong>.
-    </div>
-  {% endblock %}
-{% endif %}
+<!-- Original Header -->
+{% include "partials/header.html" %}
+{% endblock %}

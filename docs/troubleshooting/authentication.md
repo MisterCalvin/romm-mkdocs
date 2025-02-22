@@ -1,9 +1,6 @@
 ---
 title: Troubleshooting Authentication
 ---
-
-## Authentication
-
 ### Error: `403 Forbidden`
 
 When authentication is enabled, most endpoints will return a `403 Forbidden` response if you're not authenticated, or if your sessions is in a broken state. The session key can be reset by [clearing your cookies](https://support.google.com/accounts/answer/32050).

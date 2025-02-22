@@ -1,13 +1,16 @@
 site_name: RomM Documentation
-site_url: 'https://8000--dev--tan-halibut-85--kevin.coder.sbotnas.io/'
+site_url: "https://8000--dev--tan-halibut-85--kevin.coder.sbotnas.io/"
 site_author: RomM Team
 site_description: Your beautiful, powerful, self-hosted rom manager
+repo_url: "https://github.com/MisterCalvin/romm-mkdocs"
+repo_name: MisterCalvin/romm-mkdocs
+edit_uri: "edit/main/docs/"
 theme:
   name: material
   icon:
-    logo: assets/images/romm-logo.png
+    repo: fontawesome/brands/github
   logo: assets/images/romm-logo.png
-  #custom_dir: docs/overrides
+  custom_dir: docs/overrides
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -20,6 +23,8 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.action.edit
+    - content.action.view
   language: en
   palette:
     # Dark mode
@@ -118,9 +123,13 @@ extra:
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 
-  version:
-    provider: mike
-    default: latest
+  env:
+    branch: !ENV [GITHUB_REF_NAME, 'main']
+    commit_sha: !ENV [commit_sha, '']  # Will be empty on main, show SHA on develop
+
+  #version:
+    #provider: mike
+    #default: latest
   #pre_release: true
 
 extra_css:

@@ -42,6 +42,3 @@ Join us on Discord, where you can ask questions, submit ideas, get help, showcas
         <img src="https://invidget.switchblade.xyz/RGPJHNMMwJ" alt="Join our Discord">
     </a>
 </div>
-
-## A simple version change
-Hello! I am only available on the `1.0.1` version of this site!

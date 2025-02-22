@@ -1,9 +1,6 @@
 ---
 title: Troubleshooting Scanning
 ---
-
-## Scanning
-
 ### Scan is skipping all platforms/ends instantly
 
 There are a few common reasons why a scan may end instantly/without scanning platforms

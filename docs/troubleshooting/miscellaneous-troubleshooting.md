@@ -1,9 +1,6 @@
 ---
 title: Miscellaneous Troubleshooting
 ---
-
-## Miscellaneous
-
 ### Restarting the container when using SQLite drops all the data/requires a full re-scan
 
 Verify that the database is mapped to a persistent storage volume in your docker compose or Unraid template.
