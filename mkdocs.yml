@@ -1,8 +1,16 @@
 site_name: RomM Documentation
-site_url: https://pages.dev
+site_url: "https://mistercalvin.github.io/romm-mkdocs/"
+site_author: RomM Team
+site_description: Your beautiful, powerful, self-hosted rom manager
+repo_url: "https://github.com/MisterCalvin/romm-mkdocs"
+repo_name: MisterCalvin/romm-mkdocs
+edit_uri: "edit/main/docs/"
 theme:
   name: material
-  logo: assets/images/romm-logo.svg
+  icon:
+    repo: fontawesome/brands/github
+  logo: assets/images/romm-logo.png
+  custom_dir: docs/overrides
   features:
     - navigation.instant
     - navigation.instant.prefetch
@@ -15,24 +23,39 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.action.edit
+    - content.action.view
   language: en
   palette:
+    # Dark mode
     - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-      primary: teal
-      accent: lime
+      primary: custom
+      accent: custom
+    # Light mode
     - scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-      primary: teal
-      accent: purple
+      primary: custom
+      accent: custom
 
 plugins:
   - search
   - mkdocs-video
+  - social:
+      cards_layout_options:
+        font_family: Roboto
+        background_color: "#371f69"
+        color: "#ede5f8"
+        logo: docs/assets/images/romm-logo.png  # Add this line - path relative to project root
+        title: RomM Documentation
+        description: Your beautiful, powerful, self-hosted rom manager
+  - glightbox:
+      skip_classes:
+        - skip-lightbox
   - markdownextradata: {}
   - literate-nav:
       nav_file: navigation.md
@@ -41,7 +64,7 @@ plugins:
       type: timeago
   - git-committers:
       repository: MisterCalvin/romm-mkdocs
-      branch: main
+      branch: develop
       exclude_committers:
         - "web-flow"  # GitHub web UI edits
       token: !ENV GITHUB_TOKEN
@@ -81,6 +104,37 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://romm.app/
       name: romm.app
+
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_PROPERTY_ID
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback!
+
+  env:
+    branch: !ENV [GITHUB_REF_NAME, 'main']
+    commit_sha: !ENV [commit_sha, '']  # Will be empty on main, show SHA on develop
+    username: !ENV GITHUB_REPOSITORY_OWNER
+    repo_name: !ENV GITHUB_REPOSITORY
+
+  #version:
+    #provider: mike
+    #default: latest
+  #pre_release: true
+
+extra_css:
+  - assets/stylesheets/extra.css
 
 watch:
   - docs

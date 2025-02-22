@@ -1,0 +1,107 @@
+name: Build and Deploy MkDocs Site
+
+on:
+  push:
+    branches: [main, develop]
+    tags:
+      - '*'  # This will trigger on any tag
+  workflow_dispatch:
+  pull_request:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Skip if commit message contains [skip ci]
+    if: |
+      !contains(join(github.event.commits.*.message, ' '), '[skip ci]') &&
+      !contains(join(github.event.commits.*.message, ' '), '[ci skip]') &&
+      !contains(join(github.event.commits.*.message, ' '), '[skip-ci]') &&
+      !contains(join(github.event.commits.*.message, ' '), '[no ci]') &&
+      (
+        github.event_name == 'push' ||
+        github.event_name == 'workflow_dispatch' ||
+        github.event_name == 'pull_request'
+      )
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+          cache: pip
+
+      - name: Cache git committers
+        uses: actions/cache@v4
+        id: cache-committers
+        with:
+          key: git-committers-${{ github.sha }}
+          path: .cache/plugin/git-committers
+          restore-keys: |
+            git-committers-
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Set Build Info
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/develop" ]]; then
+            COMMIT_SHA=$(echo ${{ github.sha }} | cut -c1-7)
+            echo "commit_sha=$COMMIT_SHA" >> $GITHUB_ENV
+          else
+            echo "commit_sha=" >> $GITHUB_ENV
+          fi
+
+      - name: Update mkdocs.yml
+        run: |
+          # Get current year
+          YEAR=$(date +'%Y')
+          # Convert username to lowercase
+          USERNAME=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          # Process the entire mkdocs.yml file
+          cat mkdocs.yml | \
+          sed "s/{{ username }}/${USERNAME}/g" | \
+          sed "s/{{ repo_name }}/${{ github.event.repository.name }}/g" | \
+          sed "s/{{ year }}/${YEAR}/g" | \
+          sed "s/{{ commit_sha }}/${commit_sha}/g" \
+          > mkdocs.generated.yml
+          mv mkdocs.generated.yml mkdocs.yml
+
+      - name: Build Site
+        env:
+          COMMIT_SHA: ${{ env.commit_sha }}
+        run: mkdocs build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

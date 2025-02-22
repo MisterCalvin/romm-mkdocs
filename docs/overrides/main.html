@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block header %}
+{% if config.extra.env.branch == "develop" %}
+<!-- Development Banner -->
+<div class="banner">
+    <p style="color:#ffffff; display:inline;">
+        ⚠️ Development Preview Build
+        {% if config.extra.env.commit_sha %}
+            (<a href="https://github.com/{{ config.extra.env.username }}/{{ config.extra.env.repo_name.split('/')[1] }}/commit/{{ config.extra.env.commit_sha }}"
+                style="color: #ffffff; text-decoration: underline;">{{ config.extra.env.commit_sha }}</a>)
+        {% endif %}
+    </p>
+</div>
+{% endif %}
+
+<!-- Original Header -->
+{% include "partials/header.html" %}
+{% endblock %}

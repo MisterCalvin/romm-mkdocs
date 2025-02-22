@@ -1,19 +1,21 @@
 ---
-title: Preamble
+title: Introduction
+description: Your beautiful, powerful, self-hosted rom manager
 hide:
   - toc
 ---
-#
-
-![Logo](assets/images/logo-header.png)
-
-<br/>
-
+![Logo](assets/images/logo-header.png){ .skip-lightbox }
+/// caption
 Welcome to the **RomM Project**, the ecosystem around the premier self-hosted, open source rom manager.
+///
+
+<div style="text-align: center">
+Official Website: <a href="https://romm.app" >https://romm.app</a> | Demo Website: <a href="https://romm.app" >https://demo.romm.app</a>
+</div>
 
 RomM (ROM Manager) allows you to scan, enrich, and browse your game collection with a clean and responsive interface. With support for multiple platforms, various naming schemes, and custom tags, RomM is a must-have for anyone who plays on emulators.
 
-To get started with RomM, head over to the [Quick Start guide](https://github.com/rommapp/romm/wiki/Quick-Start-Guide) in the main repository.
+To get started with RomM, head over to the [Quick Start guide](getting-started/quick-start-guide.md) in the main repository.
 
 ### Philosophy
 
@@ -37,7 +39,8 @@ We strive to create a safe and respectful space where everyone can contribute an
 
 Join us on Discord, where you can ask questions, submit ideas, get help, showcase your collection, and discuss RomM with other users.
 
-[![discord-invite-img]][discord-invite]
-
-[discord-invite-img]: https://invidget.switchblade.xyz/RGPJHNMMwJ
-[discord-invite]: https://discord.gg/RGPJHNMMwJ
+<div style="text-align: center">
+    <a href="https://discord.gg/RGPJHNMMwJ">
+        <img src="https://invidget.switchblade.xyz/RGPJHNMMwJ" alt="Join our Discord">
+    </a>
+</div>
