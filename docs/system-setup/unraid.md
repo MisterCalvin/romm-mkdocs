@@ -19,8 +19,8 @@ MariaDB is required to run RomM, so install it from the plugin registry. Only th
 
 Now fill in all the environment variables; descriptions of the options and sensible defaults are listed in the [example docker-compose.yml](https://github.com/rommapp/romm/blob/release/examples/docker-compose.example.yml) file.
 
-> [!WARNING]
-> The network type must be set to "Custom: romm"
+!!! warning
+    The network type must be set to "Custom: romm"
 
 ![mariadb environment variables](../assets/images/unraid/mariadb-env-vars.png)
 
