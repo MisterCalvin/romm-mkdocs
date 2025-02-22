@@ -67,7 +67,7 @@ plugins:
       branch: develop
       exclude_committers:
         - "web-flow"  # GitHub web UI edits
-      #token: !ENV MKDOCS_GIT_COMMITTERS_API_KEY
+      token: !ENV GITHUB_TOKEN
 
 markdown_extensions:
   - pymdownx.blocks.caption
