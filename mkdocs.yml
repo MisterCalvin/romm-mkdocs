@@ -1,0 +1,87 @@
+site_name: RomM Documentation
+site_url: https://pages.dev
+theme:
+  name: material
+  logo: assets/images/romm-logo.svg
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: teal
+      accent: lime
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+
+plugins:
+  - search
+  - mkdocs-video
+  - markdownextradata: {}
+  - literate-nav:
+      nav_file: navigation.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+  - git-committers:
+      repository: MisterCalvin/romm-mkdocs
+      branch: main
+      exclude_committers:
+        - "web-flow"  # GitHub web UI edits
+      token: !ENV GITHUB_TOKEN
+
+markdown_extensions:
+  - pymdownx.blocks.caption
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        - docs
+        - docs/assets/snippets
+      check_paths: true
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+copyright: Copyright &copy; 2025 RomM Team
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rommapp/romm
+      name: rommapp/romm
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/RGPJHNMMwJ
+      name: RomM Discord Channel
+    - icon: fontawesome/solid/globe
+      link: https://romm.app/
+      name: romm.app
+
+watch:
+  - docs
+  - docs/assets
